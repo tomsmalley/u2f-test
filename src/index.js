@@ -32,16 +32,16 @@ async function test_u2f() {
   await testTransport("U2F", TransportU2F);
 }
 
-async function test_webauthn() {
-  await testTransport("WebAuthn", TransportWebAuthn);
-}
-
 async function test_hid() {
   await testTransport("WebHID", TransportWebHID);
 }
 
 async function test_usb() {
   await testTransport("WebUSB", TransportWebUSB);
+}
+
+async function test_authn() {
+  await testTransport("WebAuthn", TransportWebAuthn);
 }
 
 document.querySelector('#u2f').onclick = test_u2f;
