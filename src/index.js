@@ -3,7 +3,7 @@ import TransportWebHID from "@ledgerhq/hw-transport-webhid";
 import TransportWebUSB from "@ledgerhq/hw-transport-webusb";
 import Ledger from "@ledgerhq/hw-app-avalanche";
 
-async function test_ledger(transport) {
+async function testLedger(transport) {
   console.log('Creating ledger...');
   const ledger = new Ledger(transport);
   console.log('Getting wallet ID...');
@@ -12,41 +12,31 @@ async function test_ledger(transport) {
   console.log('done');
 }
 
-async function test_u2f() {
-  const U2FSupported = await TransportU2F.isSupported();
-  if (!U2FSupported) {
-    console.log("U2F is not supported");
+async function testTransport(name, Transport) {
+  const supported = await Transport.isSupported();
+  if (!supported) {
+    console.log(name, "is not supported");
     return;
   }
-  console.log('U2F is supported');
-  const transport = await TransportU2F.create();
-  await test_ledger(transport);
+  console.log(name, "is supported");
+  const transport = await Transport.create().catch(console.error);
+  if (transport === undefined) {
+    console.log("Failed to create transport for", name);
+  } else {
+    await testLedger(transport);
+  }
+}
+
+async function test_u2f() {
+  await testTransport("U2F", TransportU2F);
 }
 
 async function test_hid() {
-  const WebHIDSupported = await TransportWebHID.isSupported();
-  if (!WebHIDSupported) {
-    console.log("WebHID is not supported");
-    return;
-  }
-  console.log('WebHID is supported');
-  const transport = await TransportWebHID.create();
-  await test_ledger(transport);
+  await testTransport("WebHID", TransportWebHID);
 }
 
 async function test_usb() {
-  const WebUSBSupported = await TransportWebUSB.isSupported();
-  if (!WebUSBSupported) {
-    console.log("WebUSB is not supported");
-    return;
-  }
-  console.log('WebUSB is supported');
-  const transport = await TransportWebUSB.create().catch(console.error);
-  if (transport === undefined) {
-    console.log("Failed to create transport");
-    return;
-  }
-  await test_ledger(transport);
+  await testTransport("WebUSB", TransportWebUSB);
 }
 
 document.querySelector('#u2f').onclick = test_u2f;
