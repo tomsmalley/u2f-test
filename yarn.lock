@@ -489,6 +489,26 @@
     "@ledgerhq/logs" "^5.22.0"
     u2f-api "0.2.7"
 
+"@ledgerhq/hw-transport-webhid@^5.22.0":
+  version "5.22.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webhid/-/hw-transport-webhid-5.22.0.tgz#35f80e32183c4a7f2efa342d0bedc80c22012e6f"
+  integrity sha512-lBw71NGmDVhOOzotU0SBOD2JvSjRjPFq1wa21WlftAAuWHV9YM8oCItKQev/ZBswpUmCzZ9MIag745XJyb0Q6w==
+  dependencies:
+    "@ledgerhq/devices" "^5.22.0"
+    "@ledgerhq/errors" "^5.22.0"
+    "@ledgerhq/hw-transport" "^5.22.0"
+    "@ledgerhq/logs" "^5.22.0"
+
+"@ledgerhq/hw-transport-webusb@^5.22.0":
+  version "5.22.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webusb/-/hw-transport-webusb-5.22.0.tgz#f433b4ad8175e1b47b091766b85071c35175a27d"
+  integrity sha512-fPj9x+Ce48g1t7vv2RvT29KonDMUPhLMPGcsX7Kr+IRsheBnaJUhgUVzKXHevaNF1xWhkJEW/Sd8Wo5wyK1pOw==
+  dependencies:
+    "@ledgerhq/devices" "^5.22.0"
+    "@ledgerhq/errors" "^5.22.0"
+    "@ledgerhq/hw-transport" "^5.22.0"
+    "@ledgerhq/logs" "^5.22.0"
+
 "@ledgerhq/hw-transport@^5.22.0", "@ledgerhq/hw-transport@^5.9.0":
   version "5.22.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport/-/hw-transport-5.22.0.tgz#d627948b43005ec9e7dfe85adf9aa01e130de280"
