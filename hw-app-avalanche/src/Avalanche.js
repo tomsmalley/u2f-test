@@ -26,7 +26,7 @@ export default class Avalanche {
 
   constructor(
     transport: Transport<*>,
-    scrambleKey: string = "Avalanche",
+    scrambleKey: string = "AvalancheTest",
     logger: (msg: string) => undefined = console.error,
   ) {
     this.transport = transport;
