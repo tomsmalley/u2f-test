@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "test",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@ledgerhq/hw-app-avalanche": "./hw-app-avalanche",
+    "@ledgerhq/hw-transport-u2f": "^5.22.0",
+    "lodash": "^4.17.20"
+  }
+}
