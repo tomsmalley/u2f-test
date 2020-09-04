@@ -1,6 +1,7 @@
 import TransportU2F from "@ledgerhq/hw-transport-u2f";
 import TransportWebHID from "@ledgerhq/hw-transport-webhid";
 import TransportWebUSB from "@ledgerhq/hw-transport-webusb";
+import TransportWebAuthn from "@ledgerhq/hw-transport-webauthn";
 import Ledger from "@ledgerhq/hw-app-avalanche";
 
 async function testLedger(transport) {
@@ -31,6 +32,10 @@ async function test_u2f() {
   await testTransport("U2F", TransportU2F);
 }
 
+async function test_webauthn() {
+  await testTransport("WebAuthn", TransportWebAuthn);
+}
+
 async function test_hid() {
   await testTransport("WebHID", TransportWebHID);
 }
@@ -42,4 +47,4 @@ async function test_usb() {
 document.querySelector('#u2f').onclick = test_u2f;
 document.querySelector('#hid').onclick = test_hid;
 document.querySelector('#usb').onclick = test_usb;
-
+document.querySelector('#authn').onclick = test_authn;

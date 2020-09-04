@@ -489,6 +489,16 @@
     "@ledgerhq/logs" "^5.22.0"
     u2f-api "0.2.7"
 
+"@ledgerhq/hw-transport-webauthn@^5.22.0":
+  version "5.22.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webauthn/-/hw-transport-webauthn-5.22.0.tgz#e2750a5a8f05a5f2728b22811043d192a6f9a33b"
+  integrity sha512-nM0e0vvxBpp25TvK6QetCq31Q5kEweZSTvRIvUxFtzWh2Yg+lRuvKIYMeNdkxd+6jvKtd2jzV4BsEuqqtG0l3A==
+  dependencies:
+    "@ledgerhq/devices" "^5.22.0"
+    "@ledgerhq/errors" "^5.22.0"
+    "@ledgerhq/hw-transport" "^5.22.0"
+    "@ledgerhq/logs" "^5.22.0"
+
 "@ledgerhq/hw-transport-webhid@^5.22.0":
   version "5.22.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webhid/-/hw-transport-webhid-5.22.0.tgz#35f80e32183c4a7f2efa342d0bedc80c22012e6f"
@@ -3295,7 +3305,7 @@ lodash.sortby@^4.7.0:
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
 
-lodash@^4.17.19, lodash@^4.17.20:
+lodash@^4.17.19:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
